@@ -198,6 +198,8 @@ module motor_gripper() {
             motor_stack(false); //stack with no arms
             translate([0,0,-1.5]) cube([22,12,2],center=true);
         }
+        //motor hole through base
+        cylinder(h=10,r=3.75,center=true);
         //screw hole
         color([1,0,0]) translate([-8.5,-3.5,-1]) cylinder(h=5,r=1,center=true);
         //screw hole
@@ -205,7 +207,7 @@ module motor_gripper() {
         //motor stack hole
         //color([0,1,0]) cylinder(h=10,r=2,center=true);
         //carbon rod indent
-        color([0,0,0]) translate([0,0,-2.5]) rotate([0,90,0]) cylinder(h=25,r=1,center=true);
+        color([0,0,0]) translate([0,0,-2.5]) rotate([0,90,0]) cylinder(h=25,r=1.2,center=true);
     }
     
     //now the base piece - note upside down so holes on other diagonal
@@ -217,7 +219,7 @@ module motor_gripper() {
             //screw hole
             color([1,0,0]) translate([8.5,-3.5,-1]) cylinder(h=5,r=1,center=true);
             //carbon rod indent
-            color([0,0,0]) translate([0,0,-2.5]) rotate([0,90,0]) cylinder(h=25,r=1,center=true);
+            color([0,0,0]) translate([0,0,-2.5]) rotate([0,90,0]) cylinder(h=25,r=1.2,center=true);
         }
     }
 }
